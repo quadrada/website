@@ -1,0 +1,169 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  background: radial-gradient(60% 55% at 50% 45%, var(--color-accent-soft) 0%, transparent 100%);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding-block: var(--space-6) var(--space-12);
+  text-align: center;
+}
+
+.badge {
+  width: clamp(9rem, 6rem + 10vw, 12rem);
+  height: auto;
+  margin-bottom: var(--space-2);
+  border-radius: 50%;
+  filter: drop-shadow(0 12px 24px rgb(194 65 12 / 0.25));
+  transition: rotate 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* A little "copofónica" wobble. */
+.badge:hover {
+  rotate: -6deg;
+}
+
+.title {
+  font-size: clamp(2rem, 1.4rem + 3vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.titleAccent {
+  color: var(--color-accent-strong);
+}
+
+.subtitle,
+.lead {
+  max-width: 36ch;
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.175rem);
+  color: var(--color-text-muted);
+  text-wrap: pretty;
+}
+
+.subtitle {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Floating squares, a nod to the name "Quadrada"; kept to the edges so text stays legible. */
+.decor {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.decor span {
+  position: absolute;
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 22%;
+  rotate: var(--rotate);
+  background: var(--color-accent);
+  animation: float 7s ease-in-out infinite alternate;
+  animation-delay: var(--delay, 0s);
+}
+
+.decor span:nth-child(1) {
+  --size: 4.5rem;
+  --rotate: -12deg;
+  top: 10%;
+  left: 6%;
+}
+.decor span:nth-child(2) {
+  --size: 2rem;
+  --rotate: 18deg;
+  --delay: -2s;
+  top: 30%;
+  left: 16%;
+  background: var(--color-ribbon-green);
+}
+.decor span:nth-child(3) {
+  --size: 6rem;
+  --rotate: 10deg;
+  --delay: -4s;
+  bottom: 8%;
+  left: 4%;
+  background: transparent;
+  border: 3px solid var(--color-accent-muted);
+}
+.decor span:nth-child(4) {
+  --size: 1.5rem;
+  --rotate: -24deg;
+  --delay: -1s;
+  bottom: 32%;
+  left: 12%;
+}
+.decor span:nth-child(5) {
+  --size: 5.5rem;
+  --rotate: 14deg;
+  --delay: -3s;
+  top: 8%;
+  right: 5%;
+  background: transparent;
+  border: 3px solid var(--color-accent-muted);
+}
+.decor span:nth-child(6) {
+  --size: 2.25rem;
+  --rotate: -8deg;
+  --delay: -5s;
+  top: 36%;
+  right: 14%;
+  background: var(--color-ribbon-red);
+}
+.decor span:nth-child(7) {
+  --size: 4rem;
+  --rotate: -16deg;
+  --delay: -2.5s;
+  bottom: 10%;
+  right: 7%;
+  background: var(--color-accent-muted);
+}
+.decor span:nth-child(8) {
+  --size: 1.25rem;
+  --rotate: 30deg;
+  --delay: -6s;
+  bottom: 34%;
+  right: 18%;
+}
+
+@media (max-width: 639px) {
+  .decor span {
+    width: calc(var(--size) * 0.6);
+  }
+
+  .decor span:nth-child(1) {
+    top: 4%;
+  }
+  .decor span:nth-child(5) {
+    top: 3%;
+  }
+  .decor span:nth-child(2),
+  .decor span:nth-child(6) {
+    top: 22%;
+  }
+  .decor span:nth-child(4),
+  .decor span:nth-child(8) {
+    bottom: 22%;
+  }
+}
+
+@keyframes float {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 0 -10px;
+  }
+}
