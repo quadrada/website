@@ -10,7 +10,8 @@
     "typecheck": "next typegen && tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "npm run format:check && npm run lint && npm run typecheck"
+    "check": "npm run format:check && npm run lint && npm run typecheck",
+    "qr": "node scripts/build-qr-code.mjs"
   },
   "dependencies": {
     "next": "16.4.5",
@@ -24,6 +25,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.5",
     "prettier": "3.9.10",
+    "qrcode": "1.5.4",
+    "sharp": "0.35.5",
     "typescript": "^5"
   },
   "engines": {
