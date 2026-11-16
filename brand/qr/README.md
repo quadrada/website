@@ -1,3 +1,3 @@
-QR code target: https://quadrada.vercel.app/qr
+QR code target: https://quadradaacd.com/qr
 
-Regenerate: npm run qr -- https://quadrada.vercel.app/qr
+Regenerate: npm run qr -- https://quadradaacd.com/qr

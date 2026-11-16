@@ -14,7 +14,8 @@ way they are. Record new decisions there in the same change.
 - Brand colour is the logo orange. Orange text must use `--color-accent-strong` (contrast).
 - Logo files are generated: edit `brand/`, then run `python3 scripts/build_brand_assets.py`.
 - Use the tokens in `src/app/globals.css`; never hard-code new colours or spacing.
-- Site name and social links come from `src/config/site.ts`.
+- Site name, domain (`https://quadradaacd.com`) and social links come from `src/config/site.ts`.
+- Anything printed (QR codes) must use our own domain, never `vercel.app` (decision 0007).
 - Accessibility and mobile (320px+) are required: semantic HTML, visible focus, AA contrast,
   reduced-motion support. Check pages at mobile and desktop widths before finishing.
 - Never commit member data (Excel exports, CSVs) or secrets.

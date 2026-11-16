@@ -1,6 +1,6 @@
 # 0006 — Dynamic QR code via our own redirect
 
-- Status: Accepted
+- Status: Accepted, amended by [0007](0007-own-domain.md): printed codes use our own domain
 - Date: 2026-11-08
 
 ## Context

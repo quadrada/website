@@ -14,6 +14,7 @@ const brandFont = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.legalName,
     template: `%s · ${siteConfig.name}`,

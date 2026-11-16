@@ -43,6 +43,7 @@ new record that supersedes the old one, never by editing history.
 | [0004](decisions/0004-styling-and-brand.md)     | CSS Modules + design tokens, orange brand, self-hosted font   | Accepted |
 | [0005](decisions/0005-member-login-and-dues.md) | Email-code login; dues computed from payments; Excel import   | Proposed |
 | [0006](decisions/0006-dynamic-qr-code.md)       | Dynamic QR code via our own `/qr` redirect                    | Accepted |
+| [0007](decisions/0007-own-domain.md)            | Own domain `quadradaacd.com`; printed QR codes use it         | Accepted |
 
 ## Site map
 
@@ -150,7 +151,7 @@ Planned additions, created only when the phase needs them:
 - [x] Logo (PNG). An SVG version would give sharper edges at every size, if one exists.
 - [ ] Hero photos of members/activities (landscape, ≥2000px wide, with consent of people shown).
 - [ ] Public contact email / address / NIF for the footer.
-- [ ] Domain name.
+- [x] Domain: `quadradaacd.com` (GoDaddy, auto-renew). Print QR: `brand/qr/` → `https://quadradaacd.com/qr`.
 - [ ] Excel files (phase 2): columns used, number of members, monthly or annual dues.
 - [ ] Who gets backoffice access, and what each of them can change.
 

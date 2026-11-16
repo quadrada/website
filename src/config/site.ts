@@ -4,6 +4,7 @@ export const siteConfig = {
   legalName: "A Quadrada — Agremiação Copofónica e Desportiva",
   description:
     "A Quadrada — Agremiação Copofónica e Desportiva. Segue-nos no Instagram e no Facebook. Área de sócio brevemente disponível.",
+  url: "https://quadradaacd.com",
   locale: "pt_PT",
   social: {
     instagram: "https://www.instagram.com/quadrada.acd/",
